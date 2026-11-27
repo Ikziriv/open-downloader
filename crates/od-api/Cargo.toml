@@ -1,0 +1,18 @@
+[package]
+name = "od-api"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+od-core.workspace = true
+axum.workspace = true
+reqwest.workspace = true
+tokio.workspace = true
+futures.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+
+[dev-dependencies]
+tower-http = { version = "0.6", features = ["fs"] }
+tempfile = "3"

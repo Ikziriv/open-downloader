@@ -1,0 +1,13 @@
+# Linux XDG Autostart fallback for non-systemd desktop environments.
+# Installed to: ~/.config/autostart/open-downloader.desktop
+
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Open Downloader
+Comment=High-speed multi-protocol download daemon
+Exec={{BIN_PATH}} serve
+Terminal=false
+Hidden=false
+X-GNOME-Autostart-enabled=true
+Categories=Network;FileTransfer;

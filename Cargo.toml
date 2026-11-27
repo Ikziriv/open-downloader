@@ -1,0 +1,32 @@
+[workspace]
+resolver = "3"
+members = ["crates/*"]
+default-members = ["crates/od-core", "crates/od-api", "crates/od-cli"]
+
+[workspace.package]
+version = "0.2.0"
+edition = "2024"
+license = "GPL-2.0-only"
+
+[workspace.dependencies]
+od-core = { path = "crates/od-core" }
+od-api = { path = "crates/od-api" }
+tokio = { version = "1", features = ["full"] }
+reqwest = { version = "0.12", features = ["stream", "blocking", "rustls-tls", "json"], default-features = false }
+futures = "0.3"
+thiserror = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+axum = "0.8"
+getrandom = "0.3"
+roxmltree = "0.20"
+aes = "0.8"
+cbc = "0.1"
+tokio-util = { version = "0.7", features = ["rt"] }
+gpui = "0.2"
+
+[profile.release]
+opt-level = 3
+lto = "thin"
+codegen-units = 1
+strip = true

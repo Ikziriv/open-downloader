@@ -1,0 +1,16 @@
+[package]
+name = "od-app"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+gpui.workspace = true
+od-core.workspace = true
+reqwest.workspace = true
+tokio.workspace = true
+axum.workspace = true
+serde.workspace = true
+
+[dev-dependencies]
+gpui = { workspace = true, features = ["test-support"] }

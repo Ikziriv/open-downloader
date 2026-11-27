@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Open Downloader",
+  "version": "0.2.0",
+  "description": "Send downloads and links to the Open Downloader desktop app.",
+  "permissions": ["downloads", "nativeMessaging", "contextMenus", "cookies", "storage", "webRequest", "activeTab"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Open Downloader"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
